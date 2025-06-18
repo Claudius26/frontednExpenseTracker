@@ -18,6 +18,7 @@ export  function Expenses(){
         }
         setloading(false);
     }
+    //my commit
     fetchData();
   }, [])
   if(loading) return <p>Loading expenses...</p>;
