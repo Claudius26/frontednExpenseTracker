@@ -41,15 +41,15 @@ export function AddExpenseForm(){
         
       }
       catch(error){
-        console.log(error)
         return error;
       }
     }
     
   
   return(
-   <div>
-    <form onSubmit={handleSubmit}>
+   <div className='addExpenseForm'>
+    <h1 className='addOnExpense'>Add Expense</h1>
+    <form onSubmit={handleSubmit} className='formElement'>
       <div>
         <label htmlFor="description">Description</label>
         <input type="text" id="description" placeholder="Enter expense description" value={expense.description}
@@ -68,9 +68,9 @@ export function AddExpenseForm(){
         onChange={handleChange} required/>
       </div>
 
-      <div>
-         <button type="submit">Add expense</button>
-         <p><Link to="/dashboard">Cancel <span>&#10006;</span></Link></p>
+      <div className='addExpenseDiv'>
+        <p><Link to="/dashboard">Cancel <span>&#10006;</span></Link></p>
+         <button type="submit">Add expense</button>  
       </div>
      
     </form>

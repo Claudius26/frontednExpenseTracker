@@ -3,13 +3,15 @@ import {Link} from 'react-router-dom'
 
 export default function Register(){
   return (
-    <>
-      <h1>Create an account</h1>
+    <div className='mainContainer'>
+      <h1 className='createAccount'>Create an account</h1>
       <Form/>
-       <p>
+      <div className='loginPage'>
+        <p>
         Already have an account?
         <Link to="/login"> Sign in here</Link>
       </p>
-    </>
+      </div>
+    </div>
   );
 }

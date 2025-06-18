@@ -1,13 +1,315 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.addExpenseForm {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.addOnExpense {
+  text-align: center;
+  font-size: 2rem;
+  color: #1976d2;
+  margin-bottom: 30px;
+}
+
+.formElement > div {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formElement input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.addExpenseDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.addExpenseDiv p {
+  margin: 0;
+  font-weight: bold;
+  color: #d32f2f;
+  flex-shrink: 0;
+}
+
+.addExpenseDiv a {
+  color: #d32f2f;
+}
+
+.addExpenseDiv button {
+  background-color: #388e3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.totalConatiner {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #e3f2fd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.totalAmountContainer {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.totalAmountContainer h1 {
+  margin-bottom: 12px;
+}
+
+.totalAmountContainer p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.totalConatiner .backLink {
+  margin-top: 20px;
+}
+
+.totalConatiner .backLink button {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mainContainer {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.tableContent {
+  overflow-x: auto;
+}
+
+.tableContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+th {
+  background-color: #1976d2;
+  color: white;
+}
+
+td, th {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.backLink {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backLink button {
+  background-color: #424242;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerForm {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.registerForm form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.registerForm input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.registerForm button {
+  background-color: #1976d2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.registerForm p {
+  font-size: 0.9rem;
+}
+
+.createAccount {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.loginPage {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loginPage a {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.formDiv {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.formDiv form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.formDiv input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.formDiv button {
+  background-color: #388e3c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.mainContainer h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.mainContainer p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mainContainer a {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.expenseContainer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expenseContainer h1 {
+  margin-bottom: 30px;
+  color: #1976d2;
+  font-size: 2rem;
+}
+
+.expenseContainer p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.expenseContainer a {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.logOut {
+  margin-top: 30px;
+}
+
+.logOut button {
+  background-color: #b0bec5;
+  color: #212121;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .addExpenseDiv {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .formDiv,
+  .registerForm,
+  .totalAmountContainer,
+  .mainContainer {
+    padding: 10px;
+  }
+
+  .backLink {
+    justify-content: center;
+  }
+
+  .expenseContainer {
+    padding: 20px 10px;
+  }
+
+  .expenseContainer h1 {
+    font-size: 1.5rem;
+  }
 }

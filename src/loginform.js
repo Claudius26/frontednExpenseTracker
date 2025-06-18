@@ -32,21 +32,23 @@ export function LoginForm(){
 
 
   return (
-    <div>
+    <div className='mainContainer'>
       <h1>Sign in</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" placeholder="Enter your email" value={formData.email} onChange={handleChange}/>
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" placeholder="Enter your password" value={formData.password} onChange={handleChange}/>
-        </div>
-        <div>
-          <button type='submit'>Login</button>
-        </div>
+      <div className='formDiv'>
+        <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input type="email" id="email" placeholder="Enter your email" value={formData.email} onChange={handleChange}/>
+            </div>
+            <div>
+              <label htmlFor="password">Password:</label>
+              <input type="password" id="password" placeholder="Enter your password" value={formData.password} onChange={handleChange}/>
+            </div>
+            <div>
+              <button type='submit'>Login</button>
+            </div>
       </form>
+      </div>
       <p>
         Don’t have an account?
         <Link to="/register"> Sign up</Link>

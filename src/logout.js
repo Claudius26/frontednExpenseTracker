@@ -22,7 +22,7 @@ export  function Logout(){
   }
 
  return (
-    <div>
+    <div className='logOut'>
       <button onClick={handleLogout}>
         Log out
       </button>

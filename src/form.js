@@ -39,6 +39,7 @@ export default function Form(){
 
   return (
     <>
+     <div className='registerForm'>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="firstName">Firstname:</label>
@@ -75,6 +76,9 @@ export default function Form(){
         <button type='submit'>Sign up</button>
 
       </form>
+
+     </div>
+      
     </>
   )
 }

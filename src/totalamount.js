@@ -21,7 +21,7 @@ export function TotalAmountSpent(){
   },)
 
   if(error){
-    return <div>
+    return <div className="errorConatiner">
       <p>${error}</p>
       <div>
         <button> <button><Link to="/dashboard">Back</Link></button></button>
@@ -29,12 +29,12 @@ export function TotalAmountSpent(){
     </div>
   }
   return (
-    <div>
-      <div>
+    <div className="totalConatiner">
+      <div className="totalAmountContainer">
         <h1>Total Expenses</h1>
-      <p>${totalAmount}</p>
+        <p>${totalAmount}</p>
       </div>
-      <div>
+      <div className="backLink">
         <button><Link to="/dashboard">Back</Link></button>
       </div>
     </div>

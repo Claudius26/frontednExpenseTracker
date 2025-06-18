@@ -18,7 +18,7 @@ export  function Expenses(){
         }
         setloading(false);
     }
-    //my commit
+    
     fetchData();
   }, [])
   if(loading) return <p>Loading expenses...</p>;
@@ -34,9 +34,10 @@ export  function Expenses(){
   }
      
   return (
-    <div>
+    <div className="mainContainer" >
       <h2>All Expenses</h2>
-      <table border="1" cellPadding="8" cellSpacing="0">
+      <div className="tableContent">
+        <table border="1" cellPadding="8" cellSpacing="0">
         <thead>
           <tr>
             <th>Description</th>
@@ -54,7 +55,11 @@ export  function Expenses(){
           ))}
         </tbody>
       </table>
-      <button><Link to="/dashboard">Back</Link></button>
+
+      </div>
+      <div className="backLink">
+        <button><Link to="/dashboard">Back</Link></button>
+      </div>
     </div>
   ); 
  
