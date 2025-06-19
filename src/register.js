@@ -11,6 +11,7 @@ export async function registerUser(formData){
         body: JSON.stringify(formData)
     });
     const data = await response.json();
+    
     if(data.success){
       localStorage.setItem('user', JSON.stringify(data));
       return {

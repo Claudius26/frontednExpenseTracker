@@ -1,8 +1,5 @@
 import {api} from './api.js';
-
-function getUserEmail(){
-  return localStorage.getItem('userEmail');
-}
+import { getUserEmail } from './userEmail.js';
 
 export async function viewExpenses(){
   const userEmail = getUserEmail()

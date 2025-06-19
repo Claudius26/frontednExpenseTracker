@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addExpense } from './addexpense';
+import { getUserEmail } from './userEmail';
 
 export function AddExpenseForm(){
   const [expense, setExpense] = useState(
@@ -22,7 +23,7 @@ export function AddExpenseForm(){
 
     const handleSubmit = async(event) =>{
       event.preventDefault();
-      const userEmail = localStorage.getItem('userEmail');
+      const userEmail = getUserEmail()
 
       const expenseRequest = {
         ...expense,

@@ -1,7 +1,8 @@
 import {api} from './api.js';
+import { getUserEmail } from './userEmail.js';
 
 export async function logOutUser(){
-  const userEmail = localStorage.getItem('userEmail')
+  const userEmail = getUserEmail();
   try{
     const response = await fetch(`${api()}/logOut`,{
       method: 'POST',

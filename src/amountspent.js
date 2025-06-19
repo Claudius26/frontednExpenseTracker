@@ -1,9 +1,10 @@
 import {api} from './api'
+import { getUserEmail } from './userEmail';
 
 export async function amountSpent(){
-  const userEmail = localStorage.getItem('userEmail');
+  const email = getUserEmail()
   try{
-    const response = await fetch(`${api()}/calculateAllExpenses?userEmail=${userEmail}`, {
+    const response = await fetch(`${api()}/calculateAllExpenses?userEmail=${email}`, {
       method : 'GET',
     })
     const data = await response.json();
